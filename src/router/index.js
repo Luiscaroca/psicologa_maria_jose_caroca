@@ -1,25 +1,62 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHashHistory } from "vue-router";
+//HEADER
+import Inicio from "../views/Inicio.vue";
+import AgendarHora from "../views/AgendarHora.vue";
+import Blog from "../views/Blog";
+import Comentarios from "../views/Comentarios.vue";
+import Contacto from "../views/Contacto.vue";
+import IniciarSesion from "../views/IniciarSesion.vue";
+//FOOTER
+
+//VISTAS
 
 const routes = [
+  //RUTAS HEADER
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "inicio",
+    component: Inicio,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    path: "/agendar_hora",
+    name: "agendarhora",
+    component: AgendarHora,
+  },
+  {
+    path: "/blog",
+    name: "blog",
+    component: Blog,
+  },
+  {
+    path: "/comentarios",
+    name: "comentarios",
+    component: Comentarios,
+  },
+  {
+    path: "/contacto",
+    name: "contacto",
+    component: Contacto,
+  },
+  {
+    path: "/iniciar_sesion",
+    name: "iniciarsesion",
+    component: IniciarSesion,
+  },
+  //FIN RUTAS HEADER
+  //RUTAS FOOTER
+
+  //FIN RUTAS FOOTER
+  //RUTA NO EXISTENTE REDIRIGE A INICIO
+  {
+    path: "/:pathMatch(.*)*",
+    name: "not_found",
+    component: Inicio,
+  },
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
