@@ -4,7 +4,7 @@
 
     <nav
       class="navbar navbar-expand-md navbar-light"
-      style="background: linear-gradient(to right, #adcce9, #fbadb0)"
+      style="background: linear-gradient(to right, #adcce9, #fbadb0); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"
     >
       <div
         class="container-fluid"
@@ -52,7 +52,7 @@
           id="menu"
           style="
       --  background: #1c89ff;
-      -- border-bottom-left-radius: 30%;
+      --  border-bottom-left-radius: 30%;
        "
         >
           <hr class="d-md-none d-lg-block" />
