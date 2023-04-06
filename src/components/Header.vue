@@ -111,11 +111,6 @@
               >
                 <b-icon-facebook />
                 <small class="d-md-none ms-2">Facebook</small>
-                <b-icon
-                  icon="three-dots"
-                  animation="cylon"
-                  font-scale="4"
-                ></b-icon>
               </a>
             </li>
           </ul>
