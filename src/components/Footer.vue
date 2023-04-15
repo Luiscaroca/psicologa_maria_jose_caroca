@@ -14,17 +14,11 @@
                   <a
                     href="https://www.facebook.com/profile.php?id=100090508094513"
                     target="_blank"
-                    ><font-awesome-icon
-                      icon="fa-brands fa-square-facebook"
-                      size="3x"
-                  /></a>
+                    ></a>
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/devpro.consultora/"
-                    target="_blank"
-                    ><font-awesome-icon icon="fa-brands fa-instagram" size="3x"
-                  /></a>
+                    ></a>
                 </li>
               </ul>
             </div>
