@@ -69,11 +69,6 @@
               <router-link to="/blog" class="nav-link"> Blog </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/comentarios" class="nav-link">
-                Comentarios
-              </router-link>
-            </li>
-            <li class="nav-item">
               <router-link to="/contacto" class="nav-link">
                 Contacto
               </router-link>

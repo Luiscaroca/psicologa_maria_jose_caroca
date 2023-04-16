@@ -3,7 +3,6 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Inicio from "../views/Inicio.vue";
 import AgendarHora from "../views/AgendarHora.vue";
 import Blog from "../views/Blog";
-import Comentarios from "../views/Comentarios.vue";
 import Contacto from "../views/Contacto.vue";
 import IniciarSesion from "../views/IniciarSesion.vue";
 //FOOTER
@@ -26,11 +25,6 @@ const routes = [
     path: "/blog",
     name: "blog",
     component: Blog,
-  },
-  {
-    path: "/comentarios",
-    name: "comentarios",
-    component: Comentarios,
   },
   {
     path: "/contacto",
