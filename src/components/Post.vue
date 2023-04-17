@@ -16,7 +16,7 @@ export default {
   },
   mounted() {
     axios
-      .get(`http://localhost:3000/post/${this.$route.params.id}`)
+      .get(process.env.VUE_APP_ROOT_API + `/post/${this.$route.params.id}`)
       .then((response) => {
         this.blog = response.data;
       })

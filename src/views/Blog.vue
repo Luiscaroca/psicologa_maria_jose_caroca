@@ -24,7 +24,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/blog")
+      .get(process.env.VUE_APP_ROOT_API + "/blog")
       .then((response) => {
         this.blog = response.data;
       })

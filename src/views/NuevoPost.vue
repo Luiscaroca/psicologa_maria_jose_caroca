@@ -30,9 +30,9 @@ export default {
   methods: {
     createPost() {
       axios
-        .post("http://localhost:3000/post", this.blog)
+        .post(process.env.VUE_APP_ROOT_API + "/post", this.blog)
         .then((response) => {
-          this.$router.push("/");
+          this.$router.push("/blog");
         })
         .catch((error) => {
           console.error("Error al crear el post:", error);

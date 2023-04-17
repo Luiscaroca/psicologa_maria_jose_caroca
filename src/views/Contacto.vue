@@ -110,7 +110,7 @@ export default {
             useremail: this.useremail,
             message: this.message,
           };
-          fetch("http://localhost:3000/contact", {
+          fetch(process.env.VUE_APP_ROOT_API + "/contact", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
