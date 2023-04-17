@@ -6,11 +6,15 @@ const bodyParser = require("body-parser"); // Librería que permite utilizar req
 const nodemailer = require("nodemailer"); // Librería que permite el envío de correos electrónicos
 const cors = require("cors"); // Librería que permite activar protocolo CORS para envío de datos entre el front y el back
 const mysql = require("mysql2"); // Librería que permite trabajar con mysql
+const multer = require("multer"); //Librería a utilizar para la carga de archivos
+const fs = require("fs"); // Módulo de node.js que permite trabajar con archivos del cliente
 
 const app = express();
 
-app.use(cors());
-app.use(bodyParser.json());
+//Se declara el middleware de multer con el destino de las imagenes
+const upload = multer({ dest: "src/img/blog" });
+
+app.use(cors()).use(bodyParser.json());
 
 // Ruta a llamar para hacer el envío de un correo
 app.post("/contact", (req, res) => {
@@ -76,7 +80,7 @@ app.get("/blog", (req, res) => {
 // Ruta a llamar para cargar una entrada en específico del blog
 app.get("/post/:id", (req, res) => {
   connection.query(
-    "SELECT * FROM blog WHERE id = ?",
+    "SELECT title, body FROM blog WHERE id = ?",
     [req.params.id],
     (err, results) => {
       if (err) {
@@ -93,6 +97,17 @@ app.get("/post/:id", (req, res) => {
   );
 });
 
+// Ruta para llamar los datos de una imagen de un post en específico
+app.get('/image/:id', (req, res) => {
+  const id = req.params.id;
+  const query = 'SELECT image FROM blog WHERE id = ?';
+  connection.query(query, [id], (err, result) => {
+      if (err) throw err;
+      res.send(result[0].image);
+  });
+});
+
+// Ruta para crear una nueva entrada en el blog
 app.post("/post", (req, res) => {
   const { title, body } = req.body;
   if (!title || !body) {
@@ -110,6 +125,23 @@ app.post("/post", (req, res) => {
       }
       const createdPost = { id: result.insertId, title, body };
       res.json(createdPost);
+    }
+  );
+});
+
+// Ruta para editar la última entrada del blog para cargar la imagen
+app.post("/upload", upload.single("image"), (req, res) => {
+  const imageBuffer = fs.readFileSync(req.file.path);
+  connection.query(
+    "UPDATE blog SET image = (?) WHERE id = (SELECT LAST_INSERT_ID())",
+    [imageBuffer],
+    (err, result) => {
+      if (err) {
+        console.error(err);
+        res.status(500).send("Error al subir la imagen");
+      } else {
+        res.status(200).send("Imagen subida correctamente");
+      }
     }
   );
 });

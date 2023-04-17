@@ -29,7 +29,7 @@ export default {
         this.blog = response.data;
       })
       .catch((error) => {
-        console.error("Error al cargar el blog:", error);
+        console.error("Error al cargar el blog: ", error);
       });
   },
 };

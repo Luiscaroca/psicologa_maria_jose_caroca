@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Agrega una nueva entrada</h1>
-    <form @submit.prevent="createPost">
+    <form @submit.prevent="createPost" enctype="multipart/form-data">
       <div>
         <label for="title">Título:</label>
         <input type="text" id="title" v-model="blog.title" required />
@@ -10,6 +10,7 @@
         <label for="body">Cuerpo:</label>
         <textarea id="body" v-model="blog.body" required></textarea>
       </div>
+      <div><input type="file" @change="handleFileUpload" /></div>
       <button type="submit">Crear entrada</button>
     </form>
   </div>
@@ -25,17 +26,26 @@ export default {
         title: "",
         body: "",
       },
+      file: null,
     };
   },
   methods: {
+    handleFileUpload(event) {
+      this.file = event.target.files[0];
+    },
     createPost() {
+      const formData = new FormData();
+      formData.append("image", this.file);
       axios
         .post(process.env.VUE_APP_ROOT_API + "/post", this.blog)
+        .then((response) => {
+          axios.post(process.env.VUE_APP_ROOT_API + "/upload", formData);
+        })
         .then((response) => {
           this.$router.push("/blog");
         })
         .catch((error) => {
-          console.error("Error al crear el post:", error);
+          console.error("Error al crear el post: ", error);
         });
     },
   },
