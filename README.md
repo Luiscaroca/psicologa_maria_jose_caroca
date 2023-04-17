@@ -19,9 +19,11 @@ En esta plantilla podemos encontrar varias dependencias presentes para el funcio
 - Implementación de vue3-google-map, para la carga y muestra de Google Maps en el sitio.
 - Express.js para el trabajo y acciones del backend.
 - Integración de dotenv para el trabajo de variables de entorno y que estas no sean públicas en el repositorio ni en los archivos locales del sistema.
-- Integración de cors para comunicación segura entre frotnend y backend.
+- Integración de cors para comunicación segura entre frontend y backend.
 - Integración de nodemailer para el envío de correos electrónicos desde el sistema.
 - Integración de body-parser, que permite la utilización de request y response.
+- Integración de mysql2, que permite la conexión a bases de dato MySQL.
+- Integración de multer, que permite el trabajo con archivos entre cliente y servidor.
 
 Se irán agregando nuevas funciones a medida que la plantilla vaya evolucionando.
 
@@ -50,5 +52,5 @@ npm run serve
 ```
 Para ejecutar nuestro backend se debe utilizar el siguiente comando:
 ```
-node index.js
+node server.js
 ```
