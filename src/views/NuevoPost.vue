@@ -1,18 +1,67 @@
 <template>
-  <div>
-    <h1>Agrega una nueva entrada</h1>
-    <form @submit.prevent="createPost" enctype="multipart/form-data">
-      <div>
-        <label for="title">Título:</label>
-        <input type="text" id="title" v-model="blog.title" required />
+  <div class="container">
+    <div class="row mt-4 mb-4">
+      <div class="col mx-auto">
+        <div class="card">
+          <div class="card-header"><h2>Agrega una nueva entrada</h2></div>
+          <div class="card-body">
+            <form
+              @submit.prevent="createPost"
+              enctype="multipart/form-data"
+            >
+              <div
+                class="form-group"
+                style="text-align: left"
+              >
+                <label for="title">Título:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="title"
+                  id="title"
+                  v-model="blog.title"
+                  required
+                />
+              </div>
+              <div
+                class="form-group mt-2"
+                style="text-align: left"
+              >
+                <label for="body">Cuerpo:</label>
+                <textarea
+                  class="form-control"
+                  name="body"
+                  id="body"
+                  rows="20"
+                  v-model="blog.body"
+                  required
+                  style="resize: none"
+                ></textarea>
+              </div>
+              <div
+                class="form-group mt-2"
+                style="text-align: left"
+              >
+                <label for="image">Imagen de portada:</label>
+                <input
+                  class="form-control"
+                  name="image"
+                  id="image"
+                  type="file"
+                  @change="handleFileUpload"
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary mt-2"
+              >
+                Crear entrada
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div>
-        <label for="body">Cuerpo:</label>
-        <textarea id="body" v-model="blog.body" required></textarea>
-      </div>
-      <div><input type="file" @change="handleFileUpload" /></div>
-      <button type="submit">Crear entrada</button>
-    </form>
+    </div>
   </div>
 </template>
 

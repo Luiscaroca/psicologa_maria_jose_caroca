@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <form class="mx-auto" id="formsesion">
+    <form
+      class="mx-auto"
+      id="formsesion"
+    >
       <div class="mb-3">
         <label class="form-label">Rut:</label>
         <input
@@ -28,7 +31,11 @@
         </li>
       </ul>
 
-      <input type="submit" value="Iniciar sesión" class="modal-btn" />
+      <input
+        type="submit"
+        value="Iniciar sesión"
+        class="modal-btn"
+      />
     </form>
   </div>
 </template>

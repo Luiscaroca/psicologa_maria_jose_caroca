@@ -3,7 +3,10 @@
     <Header />
 
     <router-view v-slot="{ Component }">
-      <Transition name="page-slide" mode="out-in">
+      <Transition
+        name="page-slide"
+        mode="out-in"
+      >
         <component :is="Component" /></Transition
     ></router-view>
 

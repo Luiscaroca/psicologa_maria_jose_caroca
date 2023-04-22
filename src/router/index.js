@@ -45,8 +45,8 @@ const routes = [
     component: NuevoPost,
   },
   {
-    path: "/iniciar_sesion",
-    name: "iniciarsesion",
+    path: "/admin",
+    name: "admin",
     component: IniciarSesion,
   },
   // FIN OTRAS RUTAS

@@ -8,7 +8,10 @@
           </div>
           <div class="card-body">
             <form @submit.prevent="submitForm">
-              <div class="form-group" style="text-align: left">
+              <div
+                class="form-group"
+                style="text-align: left"
+              >
                 <label for="name">Nombre</label>
                 <input
                   type="text"
@@ -17,12 +20,18 @@
                   id="name"
                   v-model="name"
                 />
-                <div v-if="errorName == true" class="text-danger">
+                <div
+                  v-if="errorName == true"
+                  class="text-danger"
+                >
                   {{ "El campo nombre es requerido." }}
                 </div>
               </div>
 
-              <div class="form-group mt-2" style="text-align: left">
+              <div
+                class="form-group mt-2"
+                style="text-align: left"
+              >
                 <label for="useremail">Email</label>
                 <input
                   type="useremail"
@@ -31,12 +40,18 @@
                   id="useremail"
                   v-model="useremail"
                 />
-                <div v-if="errorMail == true" class="text-danger">
+                <div
+                  v-if="errorMail == true"
+                  class="text-danger"
+                >
                   {{ "El campo email es requerido." }}
                 </div>
               </div>
 
-              <div class="form-group mt-2" style="text-align: left">
+              <div
+                class="form-group mt-2"
+                style="text-align: left"
+              >
                 <label for="message">Mensaje</label>
                 <textarea
                   class="form-control"
@@ -46,13 +61,24 @@
                   v-model="message"
                   style="resize: none"
                 ></textarea>
-                <div v-if="errorMessage == true" class="text-danger">
+                <div
+                  v-if="errorMessage == true"
+                  class="text-danger"
+                >
                   {{ "El campo mensaje es requerido." }}
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-primary mt-2">Enviar</button>
-              <div v-if="success" class="alert alert-success mt-3">
+              <button
+                type="submit"
+                class="btn btn-primary mt-2"
+              >
+                Enviar
+              </button>
+              <div
+                v-if="success"
+                class="alert alert-success mt-3"
+              >
                 Correo enviado!
               </div>
             </form>

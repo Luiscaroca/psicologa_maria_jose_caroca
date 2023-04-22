@@ -4,7 +4,10 @@
 
     <nav
       class="navbar navbar-expand-md navbar-light"
-      style="background: linear-gradient(to right, #adcce9, #fbadb0); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"
+      style="
+        background: linear-gradient(to right, #adcce9, #fbadb0);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      "
     >
       <div
         class="container-fluid"
@@ -58,18 +61,34 @@
           <hr class="d-md-none d-lg-block" />
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <router-link to="/" class="nav-link active"> Inicio </router-link>
+              <router-link
+                to="/"
+                class="nav-link active"
+              >
+                Inicio
+              </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/agendar_hora" class="nav-link">
+              <router-link
+                to="/agendar_hora"
+                class="nav-link"
+              >
                 Agenda tu hora
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/blog" class="nav-link"> Blog </router-link>
+              <router-link
+                to="/blog"
+                class="nav-link"
+              >
+                Blog
+              </router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/contacto" class="nav-link">
+              <router-link
+                to="/contacto"
+                class="nav-link"
+              >
                 Contacto
               </router-link>
             </li>

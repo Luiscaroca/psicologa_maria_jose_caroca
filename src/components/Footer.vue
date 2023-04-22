@@ -5,7 +5,10 @@
         <div class="col-md-4">
           <div class="footer-brand">
             <div>
-              <img src="../img/LOGO.png" alt="LOGO" />
+              <img
+                src="../img/LOGO.png"
+                alt="LOGO"
+              />
             </div>
             <h4>Redes sociales:</h4>
             <div>
@@ -14,11 +17,10 @@
                   <a
                     href="https://www.facebook.com/profile.php?id=100090508094513"
                     target="_blank"
-                    ></a>
+                  ></a>
                 </li>
                 <li>
-                  <a
-                    ></a>
+                  <a></a>
                 </li>
               </ul>
             </div>
@@ -111,7 +113,10 @@
       </div>
     </div>
     <div class="row justify-content-center w-100">
-      <div class="col-3" style="color: black">
+      <div
+        class="col-3"
+        style="color: black"
+      >
         <font-awesome-icon icon="fa-regular fa-copyright" /> Dev&Pro 2023, Todos
         los derechos reservados.
       </div>

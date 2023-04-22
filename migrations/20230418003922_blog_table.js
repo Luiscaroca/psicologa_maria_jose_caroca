@@ -3,13 +3,13 @@
  * @returns { Promise<void> }
  */
 // Para ejecutar las migraciones se debe usar el comando npx knex migrate:latest
-exports.up = function(knex) {
-  return knex.schema.createTable('blog', table => {
-    table.increments('id').primary();
-    table.string('title').notNull();
-    table.text('body').notNull();
-    table.binary('image');
-  })
+exports.up = function (knex) {
+  return knex.schema.createTable("blog", (table) => {
+    table.increments("id").primary();
+    table.string("title").notNull();
+    table.text("body").notNull();
+    table.binary("image");
+  });
 };
 
 /**
@@ -17,6 +17,6 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 // Para ejecutar la función down debemos utilizar el comando npx knex migrate:rollback, el cual hará un drop a la última tabla migrada
-exports.down = function(knex) {
-  return knex.schema.dropTable('blog');
+exports.down = function (knex) {
+  return knex.schema.dropTable("blog");
 };
