@@ -8,10 +8,11 @@ const cors = require("cors"); // Librería que permite activar protocolo CORS pa
 const mysql = require("mysql2"); // Librería que permite trabajar con mysql
 const multer = require("multer"); //Librería a utilizar para la carga de archivos
 const fs = require("fs"); // Módulo de node.js que permite trabajar con archivos del cliente
+const { registerRuntimeCompiler } = require("vue");
 
 const app = express();
 
-//Se declara el middleware de multer con el destino de las imagenes
+//Se declara el middleware de multer con el destino de las imágenes
 const upload = multer({ dest: "src/img/blog" });
 
 app.use(cors()).use(bodyParser.json());
@@ -59,7 +60,7 @@ const connection = mysql.createConnection({
 
 connection.connect((err) => {
   if (err) {
-    console.error("Error al conectarse a MySQL:", err);
+    console.error("Error al conectarse a MySQL: ", err);
     return;
   }
   console.log("Conectado a MySQL");
@@ -69,22 +70,28 @@ connection.connect((err) => {
 app.get("/blog", (req, res) => {
   connection.query("SELECT * FROM blog", (err, results) => {
     if (err) {
-      console.error("Error al cargar el blog:", err);
+      console.error("Error al cargar el blog: ", err);
       res.status(500).send("Error al cargar el blog");
       return;
     }
-    res.json(results);
+    const blog_data = results.map((blog) => ({
+      id: blog.id,
+      title: blog.title,
+      body: blog.body,
+      image: Buffer.from(blog.image).toString("base64"),
+    }));
+    res.send(blog_data);
   });
 });
 
 // Ruta a llamar para cargar una entrada en específico del blog
 app.get("/post/:id", (req, res) => {
   connection.query(
-    "SELECT title, body FROM blog WHERE id = ?",
+    "SELECT * FROM blog WHERE id = ?",
     [req.params.id],
     (err, results) => {
       if (err) {
-        console.error("Error al cargar la entrada del blog:", err);
+        console.error("Error al cargar la entrada del blog: ", err);
         res.status(500).send("Error al cargar la entrada del blog");
         return;
       }
@@ -92,19 +99,15 @@ app.get("/post/:id", (req, res) => {
         res.status(404).send("Entrada no encontrada");
         return;
       }
-      res.json(results[0]);
+      const post_data = results.map((post) => ({
+        id: post.id,
+        title: post.title,
+        body: post.body,
+        image: Buffer.from(post.image).toString("base64"),
+      }));
+      res.send(post_data[0]);
     }
   );
-});
-
-// Ruta para llamar los datos de una imagen de un post en específico
-app.get('/image/:id', (req, res) => {
-  const id = req.params.id;
-  const query = 'SELECT image FROM blog WHERE id = ?';
-  connection.query(query, [id], (err, result) => {
-      if (err) throw err;
-      res.send(result[0].image);
-  });
 });
 
 // Ruta para crear una nueva entrada en el blog
@@ -119,7 +122,7 @@ app.post("/post", (req, res) => {
     [title, body],
     (err, result) => {
       if (err) {
-        console.error("Error al crear la entrada:", err);
+        console.error("Error al crear la entrada: ", err);
         res.status(500).send("Error al crear la entrada");
         return;
       }
