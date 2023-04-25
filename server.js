@@ -8,7 +8,6 @@ const cors = require("cors"); // Librería que permite activar protocolo CORS pa
 const mysql = require("mysql2"); // Librería que permite trabajar con mysql
 const multer = require("multer"); //Librería a utilizar para la carga de archivos
 const fs = require("fs"); // Módulo de node.js que permite trabajar con archivos del cliente
-const { registerRuntimeCompiler } = require("vue");
 
 const app = express();
 
@@ -78,6 +77,7 @@ app.get("/blog", (req, res) => {
       id: blog.id,
       title: blog.title,
       body: blog.body,
+      date: blog.date,
       image: Buffer.from(blog.image).toString("base64"),
     }));
     res.send(blog_data);
@@ -103,6 +103,7 @@ app.get("/post/:id", (req, res) => {
         id: post.id,
         title: post.title,
         body: post.body,
+        date: post.date,
         image: Buffer.from(post.image).toString("base64"),
       }));
       res.send(post_data[0]);
@@ -112,21 +113,30 @@ app.get("/post/:id", (req, res) => {
 
 // Ruta para crear una nueva entrada en el blog
 app.post("/post", (req, res) => {
+  const date = new Date(); // Para obtener la fecha usamos la función Date() que posee JavaScript
+
+  let currentDay = String(date.getDate()).padStart(2, "0"); // Obtenemos el día actual
+  let currentMonth = String(date.getMonth() + 1).padStart(2, "0"); // Obtenemos el mes actual, la función getMonth() está en base 0
+  let currentYear = String(date.getFullYear()).padStart(4, "0"); // Obtenemos el año actual
+
+  let currentDate = `${currentDay}/${currentMonth}/${currentYear}`; // Obtenemos la fecha actual con el formato que se desee
+
   const { title, body } = req.body;
+
   if (!title || !body) {
     res.status(400).send("Título y cuerpo son campos requeridos");
     return;
   }
   connection.query(
-    "INSERT INTO blog (title, body) VALUES (?, ?)",
-    [title, body],
+    "INSERT INTO blog (title, body, date) VALUES (?, ?, ?)",
+    [title, body, currentDate],
     (err, result) => {
       if (err) {
         console.error("Error al crear la entrada: ", err);
         res.status(500).send("Error al crear la entrada");
         return;
       }
-      const createdPost = { id: result.insertId, title, body };
+      const createdPost = { id: result.insertId, title, body, currentDate };
       res.json(createdPost);
     }
   );

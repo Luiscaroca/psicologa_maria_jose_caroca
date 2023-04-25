@@ -64,7 +64,7 @@ npx knex migrate:latest
 ```
 Mientras que para eliminar la última base de datos agregada a través de migraciones debemos utilizar el siguiente comando:
 ```
-npx kanex migrate:rollback
+npx knex migrate:rollback
 ```
 Finalmente, si deseamos crear una nueva migración se debe utilizar el siguiente comando:
 ```

@@ -118,7 +118,11 @@
   </div>
 </template>
 
-<style>
+<style scoped>
+h4 {
+  text-align: center;
+}
+
 p {
   text-align: justify;
 }

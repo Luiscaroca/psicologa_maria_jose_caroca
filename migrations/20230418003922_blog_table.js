@@ -8,6 +8,7 @@ exports.up = function (knex) {
     table.increments("id").primary();
     table.string("title").notNull();
     table.text("body").notNull();
+    table.string("date").notNull();
     table.binary("image");
   });
 };

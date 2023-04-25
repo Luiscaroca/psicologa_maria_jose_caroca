@@ -1,8 +1,9 @@
 <template>
   <div class="container">
     <div class="row">
-      <!-- TODO Botón regresar -->
+      <!-- TODO Boton regresar -->
       <!-- TODO Agregar fecha -->
+      <!-- TODO Agregar botón editar y eliminar -->
       <div
         class="row align-self-start mt-5"
         style="text-align: left"

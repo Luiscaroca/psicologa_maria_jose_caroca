@@ -3,6 +3,8 @@
     <div class="row mt-4 mb-4">
       <div class="col mx-auto">
         <div class="card">
+          <!-- TODO Modificar verificacion de formulario -->
+          <!-- TODO Controlar que solo se puedan subir imagenes -->
           <div class="card-header"><h2>Agrega una nueva entrada</h2></div>
           <div class="card-body">
             <form
@@ -100,3 +102,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+h2 {
+  text-align: center;
+}
+</style>

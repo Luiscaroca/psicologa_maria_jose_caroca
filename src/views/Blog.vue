@@ -5,7 +5,8 @@
         <div class="col align-self-center">
           <h1>Entradas del blog</h1>
         </div>
-        <!-- TODO revisar verificacion de final de transicion -->
+        <!-- TODO Revisar verificacion de final de transicion -->
+        <!-- TODO Agregar fecha a blog -->
         <div
           class="col align-self-center"
           style="position: absolute; text-align: right"
@@ -27,23 +28,33 @@
           ></a>
         </div>
       </div>
-      <div
-        class="col-lg-4 col-sm-6 col-12 item animate-item post-1210 post type-post status-publish format-standard has-post-thumbnail hentry category-business category-design category-science tag-design tag-science tag-software-development"
-        id="post-1210"
-        style="opacity: 1; transform: translate(0px, 0px)"
-      >
+      <div class="row align-items-start mt-5">
         <article
-          class="news-item item-style"
           v-for="blog in blog"
           :key="blog.id"
         >
           <router-link :to="'/post/' + blog.id">
-            <a> <img :src="'data:image;base64,' + blog.image" /> </a>
-            <div class="news-item-info">
-              <div class="news-item-date">May 24, 2021</div>
-              <h3 class="news-item-heading item-heading">
-                <a>{{ blog.title }}</a>
-              </h3>
+            <div
+              class="col-md-4"
+              style="display: inline-block"
+            >
+              <a>
+                <img
+                  :src="'data:image;base64,' + blog.image"
+                  style="max-width: 290px; min-width: 290px"
+                />
+              </a>
+            </div>
+            <div
+              class="col-md-8"
+              style="display: inline-block"
+            >
+              <div>
+                <div>{{ blog.date }}</div>
+                <h3>
+                  <a>{{ blog.title }}</a>
+                </h3>
+              </div>
             </div>
           </router-link>
         </article>
@@ -73,3 +84,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+h1 {
+  text-align: center;
+}
+</style>
