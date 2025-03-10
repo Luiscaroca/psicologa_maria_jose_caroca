@@ -1,68 +1,28 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 // HEADER
-import Inicio from "../views/Inicio.vue";
-import AgendarHora from "../views/AgendarHora.vue";
-import Blog from "../views/Blog";
-import Contacto from "../views/Contacto.vue";
-// OTROS
-import Post from "../components/Post.vue";
-import NuevoPost from "../views/NuevoPost.vue";
-import IniciarSesion from "../views/IniciarSesion.vue";
+import Home from "../views/Home.vue";
 // FOOTER
 
 const routes = [
   // RUTAS HEADER
   {
     path: "/",
-    name: "inicio",
-    component: Inicio,
-  },
-  {
-    path: "/agendar_hora",
-    name: "agendarhora",
-    component: AgendarHora,
-  },
-  {
-    path: "/blog",
-    name: "blog",
-    component: Blog,
-  },
-  {
-    path: "/contacto",
-    name: "contacto",
-    component: Contacto,
-  },
-  // FIN RUTAS HEADER
-  // OTRAS RUTAS
-  {
-    path: "/post/:id",
-    name: "post",
-    component: Post,
-  },
-  {
-    path: "/post",
-    name: "nuevopost",
-    component: NuevoPost,
-  },
-  {
-    path: "/admin",
-    name: "admin",
-    component: IniciarSesion,
-  },
-  // FIN OTRAS RUTAS
+    name: "home",
+    component: Home,
+  }, // FIN OTRAS RUTAS
   // RUTAS FOOTER
 
   // FIN RUTAS FOOTER
-  // RUTA NO EXISTENTE REDIRIGE A INICIO
+  // RUTA NO EXISTENTE REDIRIGE A HOME
   {
     path: "/:pathMatch(.*)*",
     name: "not_found",
-    component: Inicio,
+    component: Home,
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 

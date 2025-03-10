@@ -5,7 +5,7 @@
     <nav
       class="navbar navbar-expand-md navbar-light"
       style="
-        background: linear-gradient(to right, #adcce9, #fbadb0);
+        background: linear-gradient(to right, #efbf35, #2ab673);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       "
     >
@@ -23,15 +23,12 @@
         <!-- icono -->
         <a
           class="navbar-brand"
-          tyle="background:red;"
           href="#"
-          style="background: "
         >
           <img
             class="img-fluid d-inline-block align-text-top"
-            width="380"
             alt="logo"
-            src="../img/LOGO.png"
+            src="../assets/logo.png"
           />
         </a>
 
@@ -53,44 +50,54 @@
         <div
           class="collapse navbar-collapse"
           id="menu"
-          style="
-      --  background: #1c89ff;
-      --  border-bottom-left-radius: 30%;
-       "
         >
           <hr class="d-md-none d-lg-block" />
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <router-link
-                to="/"
-                class="nav-link active"
-              >
-                Inicio
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <router-link
-                to="/agendar_hora"
+              <a
+                href="#sobre_mi"
                 class="nav-link"
               >
-                Agenda tu hora
-              </router-link>
+                Sobre mí
+              </a>
             </li>
             <li class="nav-item">
-              <router-link
-                to="/blog"
+              <a
+                href="#servicios"
                 class="nav-link"
               >
-                Blog
-              </router-link>
+                Servicios
+              </a>
             </li>
             <li class="nav-item">
-              <router-link
-                to="/contacto"
+              <a
+                href="#formacion"
                 class="nav-link"
               >
-                Contacto
-              </router-link>
+                Formación
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#ubicacion"
+                class="nav-link"
+                >Ubicación</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#agendar_hora"
+                class="nav-link"
+                >Agendar hora</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#preguntas_frecuentes"
+                class="nav-link"
+              >
+                Preguntas frecuentes
+              </a>
             </li>
           </ul>
 
@@ -109,7 +116,27 @@
           <ul class="navbar-nav flex-row flex-wrap">
             <li class="nav-item col-5 col-md-auto p-3">
               <a
-                href="https://www.instagram.com/devpro.consultora/"
+                href="https://www.doctoralia.cl/maria-jose-caroca-araya/psicologo/linares"
+                target="_blank"
+                style="color: #00c3a5"
+              >
+                <b-icon-journal-medical />
+                <small class="d-md-none ms-2">Doctoralia</small>
+              </a>
+            </li>
+            <li class="nav-item col-5 col-md-auto p-3">
+              <a
+                href="https://wa.me/56933914571"
+                target="_blank"
+                style="color: #49c958"
+              >
+                <b-icon-whatsapp />
+                <small class="d-md-none ms-2">WhatsApp</small></a
+              >
+            </li>
+            <li class="nav-item col-5 col-md-auto p-3">
+              <a
+                href="https://www.instagram.com/ps.mariajose.caroca"
                 target="_blank"
                 style="color: #f56040"
               >
@@ -119,7 +146,7 @@
             </li>
             <li class="nav-item col-5 col-md-auto p-3">
               <a
-                href="https://www.facebook.com/profile.php?id=100090508094513"
+                href="https://web.facebook.com/psicologa.linares/"
                 target="_blank"
                 style="color: #405de6"
               >
