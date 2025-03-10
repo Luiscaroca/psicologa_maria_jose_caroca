@@ -28,7 +28,8 @@
               class="accordion-collapse collapse"
             >
               <div class="accordion-body">
-                La consulta tiene un valor de $35.000
+                Las sesiones de terapia psicológica tienen un valor de $35.000
+                cada una
               </div>
             </div>
           </div>
@@ -86,7 +87,7 @@
                 recorrer juntxs los lugares donde haya que observar, donde haya
                 que ordenar. Yo te ofrezco la compañía, contención y soporte
                 para que puedas mirar zonas que no solemos querer ver. Te
-                acompaño a conocerte, a resolver, a integrar. Si se necesita de
+                acompaño a conocerte, a resolver, a integrar. Sí, se necesita de
                 tu disposición (de hecho es lo más importante). A veces el
                 primer paso es un poco difícil, pero al ir reordenando las
                 mochilas, el camino se hace un poco más liviano
@@ -111,7 +112,7 @@
               class="accordion-collapse collapse"
             >
               <div class="accordion-body">
-                Yo pondré a tu dispósición todos mis conocimientos y experiencia
+                Yo pondré a tu disposición todos mis conocimientos y experiencia
                 para que podamos caminar juntxs en este proceso de
                 autoconocimiento y sanación
                 <br />
@@ -189,8 +190,8 @@
             >
               <div class="accordion-body">
                 Generalmente son de manera semanal o quincenal, pero el periodo
-                entre sesiones lo iremos definiendo en la primera sesión y lo
-                iremos ajustando según las necesidades de tu proceso
+                entre sesiones lo definiremos en la primera sesión y lo iremos
+                ajustando según las necesidades de tu proceso
               </div>
             </div>
           </div>

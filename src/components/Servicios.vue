@@ -21,7 +21,7 @@
           />
         </div>
         <div class="col-md-7 order-1 order-md-2">
-          <h4>Servicios de terapia psicológica</h4>
+          <h4>Servicio de terapia psicológica</h4>
           <div class="row">
             <p>
               El lugar desde donde trabajo la terapia es la psicología
@@ -32,11 +32,11 @@
               está generando alguna interferencia en el sentirnos bien
               <br />
               <br />
-              Fritz Peris es un terapeuta que describe, para mi gusto, de manera
+              Fritz Perls es un terapeuta que describe, para mi gusto, de manera
               muy certera el rol del terapeuta. Dice "...posiblemente, todo lo
               que puedo hacer es ayudar a las personas a reogranizarse para
-              funcionar mejor, disgrutar más de la vida, sentir y sentirse más
-              real. ¿Qué más quieren? La vida es violines y rosas..."
+              funcionar mejor, disfrutar más de la vida, sentir y sentirse más
+              real. ¿Qué más quieren? La vida no es violines y rosas..."
             </p>
           </div>
         </div>

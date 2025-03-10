@@ -13,7 +13,8 @@
           style="padding: 0; box-shadow: 0 0 0 15px #efbf35, 0 0 0 30px #2ab673"
         />
         <small class="justify-content-center mt-5"
-          >Edificio Obispo Subercaseux, Piso 7, <strong>Oficina 708</strong>
+          >Independencia 85, Piso 7, <strong>Oficina 708</strong> <br />Edificio
+          Obispo Subercaseux
         </small>
       </div>
       <Agendar />

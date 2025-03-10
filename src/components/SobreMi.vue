@@ -19,7 +19,7 @@
             Estuve trabajando por varios años en programas de atención familiar
             y de forma paralela atendía en consulta particular desde el 2014.
             Poco a poco fui entrando de lleno a la psicología clínica,
-            descrubriendo que lo que más me encanta es acompañar procesos de
+            descubriendo que lo que más me encanta es acompañar procesos de
             terapia, de sanar y cuidar "el corazón"
             <br />
             <br />
