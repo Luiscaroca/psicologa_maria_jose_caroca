@@ -11,9 +11,9 @@
               />
             </div>
             <h4>Redes sociales:</h4>
-            <div>
+            <div class="mb-4 mb-md-0">
               <ul class="navbar-nav flex-row flex-wrap">
-                <li class="nav-item col-5 col-md-auto">
+                <li class="nav-item col-1 col-md-auto">
                   <a
                     class="h4"
                     href="https://www.doctoralia.cl/maria-jose-caroca-araya/psicologo/linares"
@@ -23,7 +23,7 @@
                     <b-icon-journal-medical />
                   </a>
                 </li>
-                <li class="nav-item col-5 col-md-auto">
+                <li class="nav-item col-1 col-md-auto">
                   <a
                     class="h4"
                     href="https://wa.me/56933914571"
@@ -33,7 +33,7 @@
                     <b-icon-whatsapp />
                   </a>
                 </li>
-                <li class="nav-item col-5 col-md-auto">
+                <li class="nav-item col-1 col-md-auto">
                   <a
                     class="h4"
                     href="https://www.instagram.com/ps.mariajose.caroca"
@@ -43,7 +43,7 @@
                     <b-icon-instagram
                   /></a>
                 </li>
-                <li class="nav-item col-5 col-md-auto">
+                <li class="nav-item col-1 col-md-auto">
                   <a
                     class="h4"
                     href="https://web.facebook.com/psicologa.linares/"
