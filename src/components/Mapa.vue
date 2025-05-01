@@ -1,10 +1,21 @@
 <template>
-  <div style="height: 500px; width: 90%">
+  <div
+    data-aos="fade-up"
+    data-aos-duration="500"
+    style="width: 90%"
+    class="mx-auto"
+  >
+    <h4 class="mb-5 text-center">Ubicación</h4>
     <l-map
       v-model="zoom"
       v-model:zoom="zoom"
       :center="[-35.84514158031952, -71.60216534444504]"
       @move="log('move')"
+      style="
+        height: 500px;
+        padding: 0;
+        box-shadow: 0 0 0 15px #efbf35, 0 0 0 30px #2ab673;
+      "
     >
       <l-tile-layer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -17,6 +28,10 @@
         <l-popup>Oficina 708</l-popup>
       </l-marker>
     </l-map>
+    <small class="d-block text-center mt-5"
+      >Independencia 85, Piso 7, <strong>Oficina 708</strong> <br />Edificio
+      Obispo Subercaseux
+    </small>
   </div>
 </template>
 

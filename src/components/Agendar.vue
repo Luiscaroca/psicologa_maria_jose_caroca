@@ -2,6 +2,8 @@
   <div
     class="mb-3"
     id="agendar_hora"
+    data-aos="fade-up"
+    data-aos-duration="500"
   >
     <h4>Agenda tu hora</h4>
     <a

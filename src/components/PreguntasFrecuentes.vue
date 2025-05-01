@@ -2,6 +2,8 @@
   <div
     class="container"
     id="preguntas_frecuentes"
+    data-aos="fade-up"
+    data-aos-duration="500"
   >
     <div class="row justify-content-end">
       <h4>Preguntas frecuentes</h4>

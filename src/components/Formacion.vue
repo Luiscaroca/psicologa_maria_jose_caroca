@@ -7,6 +7,8 @@
     <div
       class="row align-items-center mt-5"
       id="formacion"
+      data-aos="fade-up"
+      data-aos-duration="500"
     >
       <div class="col-md-7">
         <h4>Formación:</h4>

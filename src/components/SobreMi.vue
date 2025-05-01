@@ -3,6 +3,8 @@
     class="container"
     data-bs-target="navbar"
     data-bs-offset="50"
+    data-aos="fade-up"
+    data-aos-duration="500"
   >
     <div
       class="row align-items-center mt-5"
