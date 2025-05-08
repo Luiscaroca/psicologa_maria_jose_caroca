@@ -29,6 +29,7 @@
             class="img-fluid d-inline-block align-text-top"
             alt="logo"
             src="../assets/logo.png"
+            style="width: 250px; height: auto"
           />
         </a>
 
