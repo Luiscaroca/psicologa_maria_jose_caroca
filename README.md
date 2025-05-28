@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src=src/assets/LC_logo.png alt="Logo Luis Caroca" style="height: 200px; margin-right: 10px;"/>
-  <img src=src/assets/logo.png alt="Logo Psicóloga"/>
+  <img src=src/assets/logo.png alt="Logo Psicóloga" style="height: 200px; margin-left: 10px;"/>
 </p>
 
 ## ¿Para qué es este repositorio?
